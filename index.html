@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIDEO PLAYER LISS</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="player">
+            <video id="videoId" poster="./images/poster2.jpg"  src="./videos/encanto.mp4" >
+                <!-- atributos de viteo: constrols, autoplay -->
+            </video>
+            
+            <div class="player-overlay">
+
+                <h2 class="player-title"> No se habla de bruno</h2>
+                <div class="player-actions">
+                    <button class="button" id="backward" aria-label="Retroceder 10 segundos"
+                        title="Retroceder 10 segundos">
+                    </button>
+                    <button class="button" id="play" aria-label="Reproducir" title="Reproducir"> </button>
+                    <button class="button" id="pause" aria-label="Pausar" title="Pausar" hidden></button>
+                    <button class="button" id="forward" aria-label="Adelantar 10 segundos"
+                        title="Adelantar 10 segundos">
+                    </button>
+                </div>
+
+                <div class="player-progress">
+                    <!-- max="100" no se sabe cuanto es el Maximo -->
+                    <input id="progress" type="range" min="0" step="1" value="0">
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="./js/index.js">
+
+    </script>
+
+
+</body>
+
+</html>

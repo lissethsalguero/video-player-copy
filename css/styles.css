@@ -1,0 +1,78 @@
+@import './buttons.css';
+
+body {
+    background-color: #26B4BC;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+    /* border: 10px solid orange; */
+    
+    max-inline-size: 900px;
+    margin: auto;
+}
+
+.player{
+    /* border: 5px solid red; */
+    margin-block-start: 100px;
+    position: relative;
+}
+
+.player video{
+    /* border: 5px solid fuchsia; */
+
+    inline-size: 100%;
+    aspect-ratio: 16/9;
+    vertical-align: middle;
+    object-fit: cover; /*La imagen tomara el tamaño del video*/
+}
+
+.player-title {
+    /* border: solid blue 5px; */
+
+    color: white;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 20px;
+}
+
+.player-actions {
+    /* border: solid lawngreen 2px; */
+
+    position: absolute;
+    inset: 0; /*las 4 posiciones en 0*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /*Separar elementos */
+    /* z-index: 2; */
+}
+
+.player-progress{
+    /* background: yellow; */
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    display: flex;
+    padding: 10px;
+}
+.player-progress input{
+    flex: 1;
+    /* z-index: 2; */
+}
+
+/*
+.player:hover{ /*SE ACTIVARA cuando el mause pasa por el reproductor
+    border: 10px solid red;
+}*/
+
+.player-overlay{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: .3s opacity;
+}
+
+.player:hover .player-overlay{ /*AFECTARA LOS BOTONES*/
+    opacity: 1;
+}
